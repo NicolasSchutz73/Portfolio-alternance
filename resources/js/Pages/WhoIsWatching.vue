@@ -3,7 +3,7 @@ import { Link } from '@inertiajs/vue3'
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white">
+    <div class="flex flex-col items-center justify-center min-h-screen text-white">
         <span>logo temporaire</span> <!-- Mettre à jour le logo -->
         <h1 class="text-4xl mb-6">Who's watching?</h1>
         <Link href="/home" class="flex flex-col items-center no-underline text-white">

@@ -9,9 +9,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="my-8">
+    <div class="m-8">
         <h2 class="text-2xl font-bold mb-4">{{ title }}</h2>
-        <div class="flex overflow-x-auto gap-4">
+        <div class="flex overflow-x-auto gap-1">
             <ProjectItem
                 v-for="project in projects"
                 :key="project.id"
@@ -22,7 +22,4 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.carousel-item {
-    min-width: 300px; /* Les éléments du carousel ont une largeur minimale */
-}
 </style>

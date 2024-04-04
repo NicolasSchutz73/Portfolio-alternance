@@ -11,10 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold underline">
-            Bienvenue, Recruteur !
-        </h1>
+    <div class="text-white">
         <Carousel title="Projet web" :projects="webProjects" />
         <Carousel title="Projet mobile" :projects="mobileProjects" />
         <Carousel title="Projet logiciel" :projects="softwareProjects" />
