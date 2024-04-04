@@ -15,14 +15,7 @@ const props = defineProps({
             <ProjectItem
                 v-for="project in projects"
                 :key="project.id"
-                :title="project.title"
-                :description="project.description"
-                :image-url="project.image_url"
-                :video-url="project.video_url"
-                :stack="project.stack"
-                :value="project.value"
-                :age="project.age"
-                :link="project.link"
+                :project="project"
             />
         </div>
     </div>

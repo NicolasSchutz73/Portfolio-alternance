@@ -22,4 +22,9 @@ class ProjectController extends Controller
             'hobbies' => $hobbies,
         ]);
     }
+
+    public function detail(Project $project) // Route Model Binding
+    {
+        return Inertia::render('ProjectDetail', ['project' => $project]);
+    }
 }

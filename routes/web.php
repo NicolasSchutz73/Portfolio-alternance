@@ -10,3 +10,4 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [ProjectController::class, 'show']);
+Route::get('/projects/{project}', [ProjectController::class, 'detail'])->name('projects.detail');

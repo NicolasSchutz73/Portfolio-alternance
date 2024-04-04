@@ -1,28 +1,19 @@
 <script setup>
+import { Link } from '@inertiajs/vue3'
+import { defineProps } from 'vue'
+
 // Définition des props
 const props = defineProps({
-    title: String,
-    description: String,
-    imageUrl: String,
-    videoUrl: String,
-    stack: String,
-    value: String,
-    age: String,
-    link: String,
+    project: Object, // Recevoir un objet projet complet
 });
 </script>
 
 <template>
-    <div>
-        <h3>titre: {{ title }}</h3>
-        <p>description: {{ description }}</p>
-        <p>image url:{{imageUrl}}</p>
-        <p>video url:{{videoUrl}}</p>
-        <p>stack :{{stack}}</p>
-        <p>recommendation :{{value}}</p>
-        <p>age :{{age}}</p>
-        <p>lien :{{link}}</p>
-    </div>
+    <Link :href="`/projects/${project.id}`">
+        <div>
+            <h3>titre: {{project.title}}</h3>
+        </div>
+    </Link>
 </template>
 
 <style scoped>
