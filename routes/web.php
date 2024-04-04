@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 
-Route::get('/', [PageController::class, 'showHelloWorld']);
+Route::get('/', function () {
+    return Inertia::render('WhoIsWatching');
+});
 
+Route::get('/home', [ProjectController::class, 'show']);
