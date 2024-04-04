@@ -1,32 +1,27 @@
 <script setup>
-import { ref } from 'vue';
-
 // Définition des props
 const props = defineProps({
     title: String,
     description: String,
-    image_url: String,
-    video_url: String,
+    imageUrl: String,
+    videoUrl: String,
     stack: String,
     value: String,
     age: String,
     link: String,
 });
-
-// État local pour gérer le survol
-const hover = ref(false);
 </script>
 
 <template>
     <div>
-        <h3>{{ title }}</h3>
-        <p>{{ description }}</p>
-        <p>{{image_url}}</p>
-        <p>{{video_url}}</p>
-        <p>{{stack}}</p>
-        <p>{{value}}</p>
-        <p>{{age}}</p>
-        <p>{{link}}</p>
+        <h3>titre: {{ title }}</h3>
+        <p>description: {{ description }}</p>
+        <p>image url:{{imageUrl}}</p>
+        <p>video url:{{videoUrl}}</p>
+        <p>stack :{{stack}}</p>
+        <p>recommendation :{{value}}</p>
+        <p>age :{{age}}</p>
+        <p>lien :{{link}}</p>
     </div>
 </template>
 

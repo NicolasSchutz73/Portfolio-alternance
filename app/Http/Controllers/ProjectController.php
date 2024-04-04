@@ -10,7 +10,16 @@ class ProjectController extends Controller
 {
     public function show()
     {
-        $projects = Project::all();
-        return Inertia::render('Home', ['projects' => $projects]);
+        $webProjects = Project::where('type', 'Projet web')->get();
+        $mobileProjects = Project::where('type', 'Projet mobile')->get();
+        $softwareProjects = Project::where('type', 'Projet logiciel')->get();
+        $hobbies = Project::where('type', 'Hobbies')->get();
+
+        return Inertia::render('Home', [
+            'webProjects' => $webProjects,
+            'mobileProjects' => $mobileProjects,
+            'softwareProjects' => $softwareProjects,
+            'hobbies' => $hobbies,
+        ]);
     }
 }

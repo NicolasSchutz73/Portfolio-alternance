@@ -1,9 +1,12 @@
 <script setup>
 import { defineProps } from 'vue';
-import ProjectItem from '@/Components/ProjectItem.vue';
+import Carousel from '@/Components/Carousel.vue';
 
 const props = defineProps({
-    projects: Array,
+    webProjects: Array,
+    mobileProjects: Array,
+    softwareProjects: Array,
+    hobbies: Array,
 });
 </script>
 
@@ -12,20 +15,10 @@ const props = defineProps({
         <h1 class="text-3xl font-bold underline">
             Bienvenue, Recruteur !
         </h1>
-
-        <div v-for="project in projects" :key="project.id" class="carousel-item">
-            <ProjectItem
-                :title="project.title"
-                :description="project.description"
-                :image-url="project.image_url"
-                :video-url="project.video_url"
-                :stack="project.stack"
-                :value="project.value"
-                :age="project.age"
-                :link="project.link"
-
-            />
-        </div>
+        <Carousel title="Projet web" :projects="webProjects" />
+        <Carousel title="Projet mobile" :projects="mobileProjects" />
+        <Carousel title="Projet logiciel" :projects="softwareProjects" />
+        <Carousel title="Hobbies" :projects="hobbies" />
     </div>
 </template>
 
